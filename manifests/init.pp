@@ -58,7 +58,7 @@ class ceph_repo {
     ssh_authorized_key { 'tbehrens@suse.com-ceph':
          user => 'ceph',
          type => 'ssh-rsa',
-         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQCgs9BVIat7LhEZI/IO18H5KdM/0SiA8GiY+gVp4yeK3vojN13qQ6QjU4hsIbu9dw9Wg890+MFEZhZhv9Z6AvNinzAsxCVuOtsLRfiO5SFVxUA0LxrRVhuZtyfwzzC6mNgNZqN4us5lzzkRV62ZvRYmkwQMjaRG6iZxP2ckNxiSyu2GC0VEfMAiBlk/2HfuN+Z02aj2nGCEnHt+pihTWpqaS0WW9Ex7gX1yi7DybPHANIHcddq/o0/sbuD7m5ZX9AwKJaFoONBTo8HJWeStoGSBHU01Z389XMq3m+ljIsRuwAm+Q4NvBruh8NcmotZvffSSJv7k2EIGQbDLWAjr5/cngLQ4ujPi98DyQYlwhMMKxYnwmafMlIZZbwUlO/Jl8i6vn5rQFIHI1p9Ey3YsR8b+IEKe3aBxLBnTuTgVIogSw+QcqkH+o3dxjNHOR9Uqc6Q6rkof0zaBGQtkED+BdtwJVAQGDwx67T2Fvm2E7zIPeSelKzUI5HpJf8F3vEYgDnVsBgN4FFv9TarcyFkjtrh0Fmf08FRXxds4VbIRbi4Qg+WNSGxMmvYMYtEYKFeZhAaij7/zLdetl1Tcsd3HmQKvq9IeN9l00ovytdThEmn59YGsiLIHb33zHIsuzFEkckxyDQVEo4mvjOAenq7Pg0b0KJDkHXJBdX/xUdKoef5Qaw== me@thinkpad.bad.example',
+         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQCgs9BVIat7LhEZI/IO18H5KdM/0SiA8GiY+gVp4yeK3vojN13qQ6QjU4hsIbu9dw9Wg890+MFEZhZhv9Z6AvNinzAsxCVuOtsLRfiO5SFVxUA0LxrRVhuZtyfwzzC6mNgNZqN4us5lzzkRV62ZvRYmkwQMjaRG6iZxP2ckNxiSyu2GC0VEfMAiBlk/2HfuN+Z02aj2nGCEnHt+pihTWpqaS0WW9Ex7gX1yi7DybPHANIHcddq/o0/sbuD7m5ZX9AwKJaFoONBTo8HJWeStoGSBHU01Z389XMq3m+ljIsRuwAm+Q4NvBruh8NcmotZvffSSJv7k2EIGQbDLWAjr5/cngLQ4ujPi98DyQYlwhMMKxYnwmafMlIZZbwUlO/Jl8i6vn5rQFIHI1p9Ey3YsR8b+IEKe3aBxLBnTuTgVIogSw+QcqkH+o3dxjNHOR9Uqc6Q6rkof0zaBGQtkED+BdtwJVAQGDwx67T2Fvm2E7zIPeSelKzUI5HpJf8F3vEYgDnVsBgN4FFv9TarcyFkjtrh0Fmf08FRXxds4VbIRbi4Qg+WNSGxMmvYMYtEYKFeZhAaij7/zLdetl1Tcsd3HmQKvq9IeN9l00ovytdThEmn59YGsiLIHb33zHIsuzFEkckxyDQVEo4mvjOAenq7Pg0b0KJDkHXJBdX/xUdKoef5Qaw==',
          ensure => 'present',
          require => Group["ceph"],
     }
@@ -66,7 +66,7 @@ class ceph_repo {
     ssh_authorized_key { 'tbehrens@suse.com-ec2-user':
          user => 'ec2-user',
          type => 'ssh-rsa',
-         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQCgs9BVIat7LhEZI/IO18H5KdM/0SiA8GiY+gVp4yeK3vojN13qQ6QjU4hsIbu9dw9Wg890+MFEZhZhv9Z6AvNinzAsxCVuOtsLRfiO5SFVxUA0LxrRVhuZtyfwzzC6mNgNZqN4us5lzzkRV62ZvRYmkwQMjaRG6iZxP2ckNxiSyu2GC0VEfMAiBlk/2HfuN+Z02aj2nGCEnHt+pihTWpqaS0WW9Ex7gX1yi7DybPHANIHcddq/o0/sbuD7m5ZX9AwKJaFoONBTo8HJWeStoGSBHU01Z389XMq3m+ljIsRuwAm+Q4NvBruh8NcmotZvffSSJv7k2EIGQbDLWAjr5/cngLQ4ujPi98DyQYlwhMMKxYnwmafMlIZZbwUlO/Jl8i6vn5rQFIHI1p9Ey3YsR8b+IEKe3aBxLBnTuTgVIogSw+QcqkH+o3dxjNHOR9Uqc6Q6rkof0zaBGQtkED+BdtwJVAQGDwx67T2Fvm2E7zIPeSelKzUI5HpJf8F3vEYgDnVsBgN4FFv9TarcyFkjtrh0Fmf08FRXxds4VbIRbi4Qg+WNSGxMmvYMYtEYKFeZhAaij7/zLdetl1Tcsd3HmQKvq9IeN9l00ovytdThEmn59YGsiLIHb33zHIsuzFEkckxyDQVEo4mvjOAenq7Pg0b0KJDkHXJBdX/xUdKoef5Qaw== me@thinkpad.bad.example',
+         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQCgs9BVIat7LhEZI/IO18H5KdM/0SiA8GiY+gVp4yeK3vojN13qQ6QjU4hsIbu9dw9Wg890+MFEZhZhv9Z6AvNinzAsxCVuOtsLRfiO5SFVxUA0LxrRVhuZtyfwzzC6mNgNZqN4us5lzzkRV62ZvRYmkwQMjaRG6iZxP2ckNxiSyu2GC0VEfMAiBlk/2HfuN+Z02aj2nGCEnHt+pihTWpqaS0WW9Ex7gX1yi7DybPHANIHcddq/o0/sbuD7m5ZX9AwKJaFoONBTo8HJWeStoGSBHU01Z389XMq3m+ljIsRuwAm+Q4NvBruh8NcmotZvffSSJv7k2EIGQbDLWAjr5/cngLQ4ujPi98DyQYlwhMMKxYnwmafMlIZZbwUlO/Jl8i6vn5rQFIHI1p9Ey3YsR8b+IEKe3aBxLBnTuTgVIogSw+QcqkH+o3dxjNHOR9Uqc6Q6rkof0zaBGQtkED+BdtwJVAQGDwx67T2Fvm2E7zIPeSelKzUI5HpJf8F3vEYgDnVsBgN4FFv9TarcyFkjtrh0Fmf08FRXxds4VbIRbi4Qg+WNSGxMmvYMYtEYKFeZhAaij7/zLdetl1Tcsd3HmQKvq9IeN9l00ovytdThEmn59YGsiLIHb33zHIsuzFEkckxyDQVEo4mvjOAenq7Pg0b0KJDkHXJBdX/xUdKoef5Qaw==',
          ensure => 'present',
          require => Group["ceph"],
     }
