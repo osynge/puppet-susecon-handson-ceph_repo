@@ -39,7 +39,7 @@ class ceph_repo {
          require => Group["ceph"],
     }
     
-    ssh_authorized_key { 'aspires@suse.com-ceph':
+    ssh_authorized_key { 'aspiers@suse.com-ceph':
          user => 'ceph',
          type => 'ssh-rsa',
          key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDBmeaWjJnIx4VjtCjxFQ9oVhPdo0Bk3CbjyXrKe1wsTiHaTBmnqciA/5O5/YGENnieukcmxz+7rEel5RImoT3sBhrWuP9dKspguAXYOzjSbW2CKbGLqgwqjp1JniYxG0FEjvJ1ddavNY/A4/ApOU1bQwlvytt+pG+FQnQZ3X0YV+I+trvpIPFT48ngUpKoJLIp12MDZObbwdroNxW2aYma/JYeqgWxwtSBPlKo4Dulc1hOuGqS6+4mKWqoScD6KXGbKunKwRexSjVVkd6Sc3c1CgFa+uBBZAdOj/J773Ww7VZZ0KPvjTjLK5aqBAqhIwQHO/yFtzkesunCSucin4oH',
@@ -47,7 +47,7 @@ class ceph_repo {
          require => Group["ceph"],
     }
 
-    ssh_authorized_key { 'aspires@suse.com-ec2-user':
+    ssh_authorized_key { 'aspiers@suse.com-ec2-user':
          user => 'ec2-user',
          type => 'ssh-rsa',
          key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDBmeaWjJnIx4VjtCjxFQ9oVhPdo0Bk3CbjyXrKe1wsTiHaTBmnqciA/5O5/YGENnieukcmxz+7rEel5RImoT3sBhrWuP9dKspguAXYOzjSbW2CKbGLqgwqjp1JniYxG0FEjvJ1ddavNY/A4/ApOU1bQwlvytt+pG+FQnQZ3X0YV+I+trvpIPFT48ngUpKoJLIp12MDZObbwdroNxW2aYma/JYeqgWxwtSBPlKo4Dulc1hOuGqS6+4mKWqoScD6KXGbKunKwRexSjVVkd6Sc3c1CgFa+uBBZAdOj/J773Ww7VZZ0KPvjTjLK5aqBAqhIwQHO/yFtzkesunCSucin4oH',
