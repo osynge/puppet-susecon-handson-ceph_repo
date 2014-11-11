@@ -1,0 +1,6 @@
+[ceph-demo]
+name=ceph-demo
+type=rpm-md
+baseurl=http://ip-10-232-153-75.us-west-2.compute.internal/ceph-demo/
+gpgcheck=0
+enabled=1
