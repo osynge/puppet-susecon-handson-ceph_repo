@@ -12,12 +12,23 @@ class ceph_repo {
         ensure => latest,
         allow_virtual => false
     }
-
+    group {"ntp":
+        ensure => "present",
+        require => Package["ntp"],
+    }
+    file { "/etc/ntp.conf":
+        owner   => root,
+        group   => ntp,
+        mode    => 0640,
+        source  => "puppet:///modules/ceph_repo/ntp.conf",
+        require => Group["ntp"],
+        notify  => Service["ntpd"],
+    }
     service { 'ntpd':
         ensure  => "running",
         enable    => true,
         hasstatus => false,
-        require   => Package["ntp"],
+        require   => File["/etc/ntp.conf"],
     }
     file { "/etc/zypp/repos.d/ceph_demo.repo":
         owner   => root,
