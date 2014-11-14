@@ -1,7 +1,10 @@
 class ceph_repo {
 
-    package { createrepo: 
-        ensure => latest 
+    package { createrepo:
+        ensure => latest
+    }
+    package { rbd-kmp-default:
+        ensure => latest
     }
     file { "/etc/zypp/repos.d/ceph_demo.repo":
         owner   => root,
@@ -38,7 +41,7 @@ class ceph_repo {
          ensure => 'present',
          require => Group["ceph"],
     }
-    
+
     ssh_authorized_key { 'aspiers@suse.com-ceph':
          user => 'ceph',
          type => 'ssh-rsa',
@@ -86,4 +89,4 @@ class ceph_repo {
 
 
 }
- 
+
