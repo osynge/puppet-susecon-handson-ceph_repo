@@ -1,13 +1,16 @@
 class ceph_repo {
 
     package { createrepo:
-        ensure => latest
+        ensure => latest,
+        allow_virtual => false
     }
     package { rbd-kmp-default:
-        ensure => latest
+        ensure => latest,
+        allow_virtual => false
     }
     package { ntp:
-        ensure => latest
+        ensure => latest,
+        allow_virtual => false
     }
 
     service { 'ntpd':
@@ -83,13 +86,15 @@ class ceph_repo {
          ensure => 'present',
          require => Group["ceph"],
     }
-
+/*
 
     package { 'ceph-deploy':
         ensure => latest,
         name => 'ceph-deploy',
-        require => File["/etc/zypp/repos.d/ceph_demo.repo"],
+        require => File["/etc/zypp/repos.d/ceph_demo.repo"],,
+        allow_virtual => false
     }
+*/
     file { "/etc/sudoers.d/ceph":
         owner   => root,
         group   => root,
