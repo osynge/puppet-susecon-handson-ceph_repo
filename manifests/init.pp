@@ -6,6 +6,16 @@ class ceph_repo {
     package { rbd-kmp-default:
         ensure => latest
     }
+    package { ntp:
+        ensure => latest
+    }
+
+    service { 'ntpd':
+        ensure  => "running",
+        enable    => true,
+        hasstatus => false,
+        require   => Package["ntp"],
+    }
     file { "/etc/zypp/repos.d/ceph_demo.repo":
         owner   => root,
         group   => root,
