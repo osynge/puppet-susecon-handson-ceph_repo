@@ -112,9 +112,9 @@ class ceph_repo {
     }
 
     ssh_authorized_key { 'student@suseconferance_2014':
-         user => 'ec2-user',
+         user => 'ceph',
          type => 'ssh-rsa',
-         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAAB+wDITVS08Ov6cSG0H9o0nMgMYxHOh5gZs/s+DCUEN9oFNvWCvwI6uVjCe9pXZxtZgyb+j8vkJQDG2Xvoc/zg2YbRVI/akXE74ckHqvMiAU5vxB6QjmOZvyCsKQEjUjcXvSQuqtmuKeTudbUyZyWQ8dLTs0v6qLtwR0CHU1ztgSDNs3pGqH7fLi7NysAiHWVChFOFVH6BqwF8LOYJOnlNa147Ap3d/n/lP1a0p73WY88pAwqlKEgDqttKfdpRY+bKxyGQEIyw/LWEVvyo74W28V5ELD+LXIk0aa7PcXOgdleBmnSfSVFdwm2Ijze1c4zP+dBGGKYkQWE6mnmNnPADnrIMvgfUM7V0mceJJsbHZID8HARVPcKerB2oAwV2hDbGbupWrrs7oNREB0Gx0895NcyCucRPEw1BbDDfAAm1aF7TKbFjX7cuGm+mxip++pBxP91eiu+7RZViXaiGRwm3pvsPPDmjHvn6Ajb7gpgQF1lihM/7HHYEkUygzyNpNLF6XvXdQ7lyMcMxSVKSU26+LNj0bXMPfkNjbCc8K8U4OhNL8FosMLAby4dufRKIwcAVqId+Ph/5UwrD8rGuIA4SHPE3qD4DuPFoff/6tORT20VKihc8XdRI7v/xSVDCEg91uzkger5mm40XWNhh0PGv6Lsw6f3e/Wqr/oRMqw==',
+         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAAB+wDQPE9P/NSExtYKBE/mB6COhp8eIl9xGioS7sHOhFt2pwxYpNHZGDVfOzIgb/elKps7C0R0S9sP/ZtT1ueWO2kU2pUAZhgx9XUwU9tg0ZftPIQQN4h+Yy53S13V4A7T6ZjldcOJil4f1l7GeiT2lNqO9oMVOU2fkKqXgP7fkQUm4xk2jaTg7u+pt237lx/0G4IXYA1QXKyyi5jAKVdlmVWlt2UIKbmcnncfhmn2KoyeHO0MwwshbU1yFtdGt1OAmJlubEZFHD6AA+tjML3KUxpjzAL6NAOsN14+lT8SpNElEwbCJdtsg8Pnt3bInrQm2+CxZVVavrHF3cOOma8lVarXljosGNd7/Ycl6Vz5Uy2QrzeB2u38GWlsJRoGf0VFP/oL1b3CvAdD6Js5qKwXGlxAzWwMfOVOlJOSmeuyLJmBmolwMvmDJmgqkYyuvtwH/J8tBAcL18fyxM+SFALJaOpbcIAVV3+/Y2D1pdr/SMl3jDjsMBPhVH1dGvCV4JeWEu5/bYx/grYPQYuEmO7kLinR446UmXr+YuZ6AjNqf8MzQTF1BFdc0R9PX6tJ4Yp90M8OUeG0Oq7Dpw+XOptDevnME84VpL0mlsvDPABT9LjiAu/muVEq3RxfRrZac49N7ylc7ErbByoXtzOO9dGB0ZFXVhex3pVqCuJ76w==',
          ensure => 'present',
          require => Group["ceph"],
     }
