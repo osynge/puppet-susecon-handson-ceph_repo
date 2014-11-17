@@ -110,6 +110,15 @@ class ceph_repo {
          ensure => 'present',
          require => Group["ceph"],
     }
+
+    ssh_authorized_key { 'student@suseconferance_2014':
+         user => 'ec2-user',
+         type => 'ssh-rsa',
+         key  => 'AAAAB3NzaC1yc2EAAAADAQABAAAB+wDITVS08Ov6cSG0H9o0nMgMYxHOh5gZs/s+DCUEN9oFNvWCvwI6uVjCe9pXZxtZgyb+j8vkJQDG2Xvoc/zg2YbRVI/akXE74ckHqvMiAU5vxB6QjmOZvyCsKQEjUjcXvSQuqtmuKeTudbUyZyWQ8dLTs0v6qLtwR0CHU1ztgSDNs3pGqH7fLi7NysAiHWVChFOFVH6BqwF8LOYJOnlNa147Ap3d/n/lP1a0p73WY88pAwqlKEgDqttKfdpRY+bKxyGQEIyw/LWEVvyo74W28V5ELD+LXIk0aa7PcXOgdleBmnSfSVFdwm2Ijze1c4zP+dBGGKYkQWE6mnmNnPADnrIMvgfUM7V0mceJJsbHZID8HARVPcKerB2oAwV2hDbGbupWrrs7oNREB0Gx0895NcyCucRPEw1BbDDfAAm1aF7TKbFjX7cuGm+mxip++pBxP91eiu+7RZViXaiGRwm3pvsPPDmjHvn6Ajb7gpgQF1lihM/7HHYEkUygzyNpNLF6XvXdQ7lyMcMxSVKSU26+LNj0bXMPfkNjbCc8K8U4OhNL8FosMLAby4dufRKIwcAVqId+Ph/5UwrD8rGuIA4SHPE3qD4DuPFoff/6tORT20VKihc8XdRI7v/xSVDCEg91uzkger5mm40XWNhh0PGv6Lsw6f3e/Wqr/oRMqw==',
+         ensure => 'present',
+         require => Group["ceph"],
+    }
+
 /*
 
     package { 'ceph-deploy':
