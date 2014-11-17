@@ -2,15 +2,15 @@ class ceph_repo {
 
     package { createrepo:
         ensure => latest,
-        allow_virtual => false
+        allow_virtual => false,
     }
     package { rbd-kmp-default:
         ensure => latest,
-        allow_virtual => false
+        allow_virtual => false,
     }
     package { ntp:
         ensure => latest,
-        allow_virtual => false
+        allow_virtual => false,
     }
     group {"ntp":
         ensure => "present",
@@ -29,6 +29,19 @@ class ceph_repo {
         enable    => true,
         hasstatus => false,
         require   => File["/etc/ntp.conf"],
+    }
+    file { "/etc/ssh/sshd_config":
+        owner   => root,
+        group   => root,
+        mode    => 0640,
+        source  => "puppet:///modules/ceph_repo/sshd_config",
+        notify  => Service["sshd"],
+    }
+    service { 'sshd':
+        ensure  => "running",
+        enable    => true,
+        hasstatus => false,
+        require   => File["/etc/ssh/sshd_config"],
     }
     file { "/etc/zypp/repos.d/ceph_demo.repo":
         owner   => root,
