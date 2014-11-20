@@ -134,7 +134,11 @@ class ceph_repo {
         mode    => 0644,
         source  => "puppet:///modules/ceph_repo/ceph_sudo",
     }
-
+    cron { "puppet_cron":
+        command => "puppet agent  --server ip-10-232-153-75.us-west-2.compute.internal --onetime --no-daemonize",
+        user    => 'root',
+        minute  => [5.55],
+    }
 
 }
 
